@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
-}
+/* Importa la fuente IBM Plex Sans */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Estilos globales */
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Estilos para los encabezados */
+h1, h2, h3 {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Login Styles */
+.login-container {
+  width: 400px;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.login-container input {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.login-container button {
+  width: 50%;
+  height: 40px;
+  background-color: #d22973;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.login-container button:hover {
+  background-color: #d22955;
+}
+
+/* Botones globales */
+button {
+  font-family: 'IBM Plex Sans', sans-serif;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.primary {
+  background-color: #d22973;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button.primary:hover {
+  background-color: #d22955;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button.secondary {
+  background-color: #ccc;
+  color: black;
+}
+
+button.secondary:hover {
+  background-color: #bbb;
+}
+
+/* Estilos para tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: white;
+}
+
+thead {
+  background-color: #d22973;
+  color: white;
+}
+
+thead th {
+  padding: 15px;
+  text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #dce7f9;
+}
+
+/* Diálogo */
+.MuiDialogTitle-root {
+  background-color: #d22973;
+  color: white;
+  padding: 20px;
+}
+
+.MuiDialogActions-root {
+  padding: 10px 20px;
 }

@@ -1,17 +1,33 @@
 /* Importa la fuente IBM Plex Sans */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-/* Estilos para centrar el login y agrandar los cuadros */
+/* Estilos globales */
 body {
-  font-family: 'IBM Plex Sans', sans-serif; /* Aplica la fuente al cuerpo */
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: #f0f0f0; /* Color gris claro suave */
+  margin: 0;
+  padding: 0;
+  color: #333; /* Color de texto principal */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
-  background-color: #f7f7f7; /* Color de fondo suave */
 }
 
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Mejora de estilo para los encabezados */
+h1, h2, h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Estilos para centrar el login y agrandar los cuadros */
 .login-container {
   width: 400px; /* Aumenta el ancho del contenedor */
   padding: 40px;
@@ -19,7 +35,7 @@ body {
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  background-color: white; /* Fondo blanco para el contenedor */
+  background-color: #fafafa; /* Fondo beige claro */
 }
 
 .login-container input {
@@ -28,34 +44,173 @@ body {
   padding: 10px;
   margin: 20px 0;
   border: 1px solid #ddd;
-  border-radius: 10px; /* Bordes más redondeados */
-  font-size: 16px; /* Texto un poco más grande */
+  border-radius: 10px; /* Bordes redondeados */
+  font-size: 16px;
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.05); /* Sombra sutil interna */
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.login-container input:focus {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Realza el input al enfocarlo */
+  outline: none; /* Remueve el borde por defecto */
 }
 
 .login-container button {
-  width: 50%; /* Botón más pequeño, la mitad del tamaño de los cuadros de texto */
-  height: 40px; /* Altura ajustada para ser la mitad de los inputs */
+  width: 50%; /* Botón más pequeño */
+  height: 40px; /* Altura ajustada */
   background-color: #d22973;
   color: white;
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 18px; /* Fuente más grande para el botón */
+  font-size: 18px;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .login-container button:hover {
   background-color: #d22955;
+  transform: translateY(-2px); /* Efecto de elevación */
 }
 
-.main-content {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
+/* Botones globales */
+button {
+  font-family: 'IBM Plex Sans', sans-serif;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
 }
 
-h1 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
+button.primary {
+  background-color: #d22973;
+  color: white;
 }
 
+button.primary:hover {
+  background-color: #d22955;
+  transform: scale(1.02); /* Sutil aumento de tamaño */
+}
+
+button.secondary {
+  background-color: #ddd;
+  color: #333;
+}
+
+button.secondary:hover {
+  background-color: #bbb;
+}
+
+/* Mejora para formularios */
+input, textarea {
+  font-family: 'IBM Plex Sans', sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+input:focus, textarea:focus {
+  border-color: #d22973;
+  box-shadow: 0 0 5px rgba(25, 118, 210, 0.5); /* Sombra sutil */
+  outline: none;
+}
+
+/* Estilos para tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff; /* Fondo blanco */
+  margin: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+}
+
+thead {
+  background-color: #d22973;
+  color: white;
+}
+
+thead th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 500;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f0f0f0; /* Fondo gris claro */
+}
+
+tbody tr:hover {
+  background-color: #e3f2fd; /* Color de fondo al pasar el ratón */
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Sombra para inputs en las tablas */
+tbody td input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+tbody td input:focus {
+  box-shadow: 0 0 5px rgba(25, 118, 210, 0.5); /* Sombra en foco */
+}
+
+/* Estilos para los diálogos */
+.MuiDialogTitle-root {
+  background-color: #d22973;
+  color: white;
+  padding: 20px;
+  font-weight: 500;
+}
+
+.MuiDialogContent-root {
+  padding: 20px;
+}
+
+.MuiDialogActions-root {
+  padding: 10px 20px;
+}
+
+button.dialog-primary {
+  background-color: #d22973;
+  color: white;
+}
+
+button.dialog-primary:hover {
+  background-color: #d22955;
+}
+
+button.dialog-secondary {
+  background-color: #ccc;
+  color: black;
+}
+
+button.dialog-secondary:hover {
+  background-color: #bbb;
+}
+
+/* Mejora para enlaces */
+a {
+  color: #d22973;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Margen general para las secciones */
+section {
+  margin-bottom: 40px;
+}
